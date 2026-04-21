@@ -4,13 +4,12 @@ public class Employee {
    private int employeeId;
    private String name;
    private float hoursWorked, payRate;
-   private float grossPay;
+
     public Employee(int employeeId, String name, float hoursWorked, float payRate) {
         this.employeeId = employeeId;
         this.name = name;
         this.hoursWorked = hoursWorked;
         this.payRate = payRate;
-        this.grossPay = payRate * hoursWorked;
     }
 
     public int getEmployeeId() {
@@ -46,10 +45,9 @@ public class Employee {
     }
 
     public float getGrossPay() {
-        return grossPay;
+        return payRate * hoursWorked;
     }
 
-    public void setGrossPay(float grossPay) {
-        this.grossPay = grossPay;
-    }
+
+
 }
