@@ -16,7 +16,7 @@ public class PayrollReader {
             while((input = bufReader.readLine()) != null) {
                 System.out.println(input);
                 try {
-                    Thread.sleep(1000); //pauses program, for ms time
+                    Thread.sleep(600); //pauses program, for ms time
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
