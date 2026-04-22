@@ -18,11 +18,13 @@ public class PayrollReader {
         try {
             FileReader fileReader=new FileReader("src/main/resources/employee.csv");
             BufferedReader bufReader = new BufferedReader(fileReader);
-            BufferedWriter bufWriter = new BufferedWriter(new FileWriter("src/main/resources/employeePay.csv"));
+            BufferedWriter bufWriter = new BufferedWriter(new FileWriter("src/main/resources/employee-pay.csv"));
 
             String input;
             String text;
             bufReader.readLine();
+            bufWriter.write("id|name|gross pay");
+            bufWriter.newLine();
 
             while((input = bufReader.readLine()) != null) {
                 String[] parts = input.split("\\|");
@@ -35,7 +37,7 @@ public class PayrollReader {
                 System.out.printf("id:%d Name:%s, Gross Pay:$%.2f%n" , emp.getEmployeeId() ,emp.getName(), emp.getGrossPay());
 
 
-                bufWriter.write(String.format("%d | %s | $%.2f%n",emp.getEmployeeId() ,emp.getName(), emp.getGrossPay()));
+                bufWriter.write(String.format("%d | %s | %.2f%n",emp.getEmployeeId() ,emp.getName(), emp.getGrossPay()));
             }
 
 
