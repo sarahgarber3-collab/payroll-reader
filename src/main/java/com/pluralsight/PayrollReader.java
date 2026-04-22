@@ -35,7 +35,7 @@ public class PayrollReader {
                 System.out.printf("id:%d Name:%s, Gross Pay:$%.2f%n" , emp.getEmployeeId() ,emp.getName(), emp.getGrossPay());
 
 
-                bufWriter.write("%d | %s | $%.2f%n",fileName,payrollName );
+                bufWriter.write(String.format("%d | %s | $%.2f%n",emp.getEmployeeId() ,emp.getName(), emp.getGrossPay()));
             }
 
 
