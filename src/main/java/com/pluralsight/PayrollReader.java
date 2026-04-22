@@ -21,7 +21,7 @@ public class PayrollReader {
                 float payRate = Float.parseFloat(parts[3]);
 
                 Employee emp = new Employee(employeeId, name, hoursWorked, payRate);
-                System.out.println(emp.getName() + " - Gross Pay: $" + emp.getGrossPay());
+                System.out.printf("id:%d Name:%s, Gross Pay:%f %n" , emp.getEmployeeId() ,emp.getName(), emp.getGrossPay());
 
                 try {
                     Thread.sleep(600); //pauses program, for ms time
