@@ -16,9 +16,9 @@ public class PayrollReader {
 
 
         try {
-            FileReader fileReader=new FileReader("src/main/resources/employee.csv");
+            FileReader fileReader=new FileReader("src/main/resources/" + fileName);
             BufferedReader bufReader = new BufferedReader(fileReader);
-            BufferedWriter bufWriter = new BufferedWriter(new FileWriter("src/main/resources/employee-pay.csv"));
+            BufferedWriter bufWriter = new BufferedWriter(new FileWriter("src/main/resources/" + payrollName));
 
             String input;
             String text;
